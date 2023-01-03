@@ -1,0 +1,10 @@
+body {
+    font-family: Arial;
+    text-transform: capitalize;
+}
+.country {
+    font-weight: bold;
+}
+ol li {
+    font-weight: normal;
+}
