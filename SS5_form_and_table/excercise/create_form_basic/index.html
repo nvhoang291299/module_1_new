@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>form basic</title>
+</head>
+<body>
+<div class="container-st">
+    <div class="form-control">
+        <h2>sở thích của bạn</h2>
+        <form method="get">
+            <table>
+                <tr>
+                    <td class="tb-left">Họ và tên</td>
+                    <td colspan="3"><input type="text" name="yourname" id="yourname"></td>
+                </tr>
+                <tr>
+                    <td class="tb-left">Email</td>
+                    <td colspan="3"><label for="email"></label><input type="email" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td class="tb-left">Sở thích</td>
+                    <td>
+                        <input type="checkbox" value="thể thao" name="hobby">
+                        <label for="hobby">Thể thao</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="âm nhạc" name="hobby">
+                        <label for="hobby">Âm nhạc</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="đọc sách" name="hobby">
+                        <label for="hobby">Đọc sách</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" value="lướt web" name="hobby">
+                        <label for="hobby">Lướt web</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="chơi game" name="hobby">
+                        <label for="hobby">Chơi game</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="điện ảnh" name="hobby">
+                        <label for="hobby">Điện ảnh</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="3">
+                        <input type="checkbox" value="du lịch" name="hobby">
+                        <label for="hobby">Du lịch</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <input type="submit" value="Gửi thông tin">
+                        <input type="reset" value="Nhập lại">
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<div class="container-nd">
+    <div class="title">
+        <h2>đăng ký học viên</h2>
+    </div>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td>Họ và tên</td>
+                <td class="pl"><label>
+                    <input type="text" name="yourname">
+                </label></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td class="pl"><label><input type="date" name="birth"></label></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td class="pl">
+                    <label for="male" class="cl-black"><input type="radio" name="sex">Nam</label>
+                    <label for="female" class="cl-black"><input type="radio" name="sex">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td class="pl"><label><input type="text" name="address" style="height: 30px; width: 165px"></label></td>
+            </tr>
+            <tr>
+                <td>Lớp</td>
+                <td class="pl"><label><select name="class" id="class">
+                    <option value="class">- Chọn lớp -</option>
+                    <option value="c0922g1">C0922G1</option>
+                    <option value="c1022g1">C1022G1</option>
+                    <option value="c1122g1">C1122G1</option>
+                    <option value="c1222g1">C1222G1</option>
+                </select></label></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td class="pl"><label><input type="email" name="email"></label></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td class="pl"><label><input type="tel" name="numberphone"></label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="pl">
+                    <input type="submit" value="Đăng ký">
+                    <input type="reset" value="Nhập lại">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

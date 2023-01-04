@@ -1,0 +1,63 @@
+/*------- container-first-------*/
+
+.container-st {
+    width: 500px;
+    height: fit-content;
+    background-color: aquamarine;
+    position: absolute;
+    font-family: Arial, sans-serif;
+}
+.form-control {
+    background-color: white;
+    margin: 10px 20px;
+    position: relative;
+}
+h2 {
+    top: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: red;
+    width: 99%;
+    margin: auto;
+    color: white;
+    position: relative;
+    padding: 5px 0;
+}
+.tb-left {
+    text-align: right;
+    color: blue;
+}
+.form-control form {
+    margin-top: 10px;
+}
+.form-control form table {
+    margin: auto;
+}
+.container-st label[for="hobby"] {
+    color: red;
+}
+.cl-black {
+    color: black;
+}
+/*------ container-second -------*/
+/*#D4FDD6*/
+.container-nd {
+    position: absolute;
+    width: 450px;
+    height: fit-content;
+    background-color: #FFFDA9;
+    right: 10px;
+    font-family: Arial, sans-serif;
+    color: blue;
+}
+.container-nd h2 {
+    text-align: left;
+    color: blue!important;
+    background-color: #D4FDD6;
+}
+.container-nd form{
+    margin: 10px;
+}
+.pl{
+   padding-left: 20px;
+}

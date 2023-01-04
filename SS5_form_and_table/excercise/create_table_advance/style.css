@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.chessboard {
+    background-color: #FFB300;
+    width: 700px;
+    height: 700px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.chessboard table {
+    width: 600px;
+    height: 600px;
+    border-spacing: 0px;
+}
+.cl-black {
+    background-color: black;
+}
+.cl-white {
+    background-color: white;
+}
+/*------calendar------*/
+.calendar{
+    margin-top: 50px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+}
+.calendar table{
+    border-spacing: 0px;
+}
+td{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+.week-vn th{
+    border: 1px solid white;
+    color: white;
+}
+.day td {
+    border: 1px solid silver;
+    font-size: 18px;
+}
+.cl-blue {
+    color: blue;
+}
+.cl-red {
+    color: red;
+}
+sub {
+    color: black;
+    font-size: 12px;
+}
+.bg-red {
+    background-color: red;
+}
+.bg-blue {
+    background-color: blue;
+}
+.bg-orange {
+    background-color: orange;
+}
+
+
