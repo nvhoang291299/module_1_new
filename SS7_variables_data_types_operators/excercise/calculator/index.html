@@ -27,15 +27,12 @@
         const btns = document.querySelectorAll("button");
         const result = document.querySelector(".result");
 
-        for (let i = 0; i < inputs.length; i++) {
-            for (let j = 0; j < btns.length; j++) {
+        for (let j = 0; j < btns.length; j++) {
             const btn = btns[j];
             btn.onclick = function (e) {
                 let res
                 if (!inputs[0].value || !inputs[1].value) {
-                    if (!parseInt( inputs[i].value)){
                     alert("ban chua nhap gia tri");
-                    }
                 } 
                 if(inputs[0].value || inputs[1].value) {
                     if (btn.textContent === "Addition(+)") {
@@ -57,8 +54,6 @@
                     }  
                 }
             }
-        }  
-    console.log(inputs[0]);
     </script>
 </body>
 </html>
