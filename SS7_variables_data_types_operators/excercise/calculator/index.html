@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+
+    <div class="container">
+        <form action="#" method="get">
+            <input type="number" placeholder="number one">
+            <input type="number" placeholder="number two">
+            <input type="text" placeholder="result" class="result" readonly><br>
+            <div style="margin-top: 10px">
+                <button>Addition(+)</button>
+                <button>Subtraction(-)</button>
+                <button>Multiplication(*)</button>
+                <button>Division(/)</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        const inputs = document.querySelectorAll("input");
+        const btns = document.querySelectorAll("button");
+        const result = document.querySelector(".result");
+
+        for (let i = 0; i < inputs.length; i++) {
+            for (let j = 0; j < btns.length; j++) {
+            const btn = btns[j];
+            btn.onclick = function (e) {
+                let res
+                if (!inputs[0].value || !inputs[1].value) {
+                    if (!parseInt( inputs[i].value)){
+                    alert("ban chua nhap gia tri");
+                    }
+                } 
+                if(inputs[0].value || inputs[1].value) {
+                    if (btn.textContent === "Addition(+)") {
+                    res = +inputs[0].value + +inputs[1].value;
+                        result.value = res
+                        }
+                    if (btn.textContent === "Subtraction(-)") {
+                        res = +inputs[0].value - +inputs[1].value;
+                            result.value = res
+                        }
+                    if (btn.textContent === "Multiplication(*)") {
+                        res = +inputs[0].value * +inputs[1].value;
+                            result.value = res
+                        }
+                    if (btn.textContent === "Division(/)") {
+                        res = +inputs[0].value / +inputs[1].value;
+                            result.value = res
+                        }
+                    }  
+                }
+            }
+        }  
+    console.log(inputs[0]);
+    </script>
+</body>
+</html>

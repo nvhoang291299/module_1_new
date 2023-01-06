@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>currency converter</title>
+    <style>
+        body{
+            text-transform: capitalize;
+        }
+        th,td {
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>currency converter</h3>
+        <form action="#" method="get">
+            <table>
+                <tr>
+                    <th>amount</th>
+                    <th>from currency</th>
+                    <th>to currency</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td><label><input type="number" class="amount"></label></td>
+                    <td><label>
+                            <select name="from-currency" class="fromCurrency">
+                                <option value="vnd">VND</option>
+                                <option value="usd">USD</option>
+                            </select>
+                        </label>
+                    </td>
+                    <td><label>
+                        <select name="to-currency" class="toCurrency">
+                            <option value="vnd">VND</option>
+                            <option value="usd">USD</option>
+                        </select>
+                    </label>
+
+                    </td>
+                    <td>
+                       <button class="convert">Convert</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left!important;" class="res" colspan="4">result: <span></span></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        let input = document.querySelector(".convert");
+        let num = document.querySelector("span");
+        input.onclick = function(e) {
+            e.preventDefault();
+            let form = document.querySelector("form");
+            let amount = form.querySelector(".amount").value;
+            let fromCurrency = form.querySelector(".fromCurrency").value;
+            let toCurrency = form.querySelector(".toCurrency").value;
+            let total
+            if (fromCurrency === 'vnd' && toCurrency === 'usd') {
+                total = amount / 23000;
+                num.innerHTML = total + " " + "$"
+            }
+            if (fromCurrency === 'vnd' && toCurrency === 'vnd') {
+                total = amount;
+                num.innerHTML = total + " " + "VND"
+            }
+            if (fromCurrency === 'usd' && toCurrency === 'vnd') {
+                total = amount * 23000;
+                num.innerHTML = total + " " + "VND"
+            }
+            if (fromCurrency === 'usd' && toCurrency === 'usd') {
+                total = amount;
+                num.innerHTML = total + " " + "$"
+            }
+        }
+    </script>
+</body>
+</html>
