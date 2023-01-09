@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check division</title>
+</head>
+<body>
+    <h1>kiểm tra lấy dư</h1>
+    <form action="">
+        <label for="a">
+            <input type="number" name="a" id="a" placeholder="nhap a">
+        </label>
+        <label for="b">
+            <input type="number" name="b" id="b" placeholder="nhap b">
+        </label>
+        <button type="button">check</button>
+    </form>
+    <script>
+        const check = document.querySelector("button");
+
+        check.onclick = function (){
+            const a = document.querySelector("#a").value;
+            const b = document.querySelector("#b").value;
+            
+            let res = a % b
+            if (res == 0) {
+                alert("a chia hết cho b");
+            } else {
+                alert("a không chia hết cho b");
+            }
+        }
+    </script>
+</body>
+</html>

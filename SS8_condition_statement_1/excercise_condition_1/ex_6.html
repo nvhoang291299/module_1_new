@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>excercise 6</title>
+</head>
+<body>
+    <h1> kiểm tra tuổi</h1>
+    <form action="">
+        <label for="price"> giá bán:
+            <input type="number" name="price" id="price" placeholder="nhap gia ban">
+        </label><br>
+        <!-- <label for="percent">
+            <input type="number" name="percent" id="percent" placeholder="nhap phan tram hoa hong">
+        </label> -->
+        <label for="commission">tiền hoa hồng:
+            <input type="number" name="commission" id="commission" style="margin-top: 10px" readonly>
+        </label>
+        <button type="button">check</button>
+    </form>
+    <script>
+        const check = document.querySelector("button");
+        
+        check.onclick = function (){
+            const price = +document.querySelector("#price").value;
+            const commission = document.querySelector("#commission");
+            
+            let result
+            if (price > 5000000) {
+                result = price * 0.1;
+                commission.value = result;
+            } else if (price <= 5000000 && price > 2000000) {
+                result = price * 0.05;
+                commission.value = result;
+            } else if (price >= 0 && price <= 2000000) {
+                result = price * 0.03;
+                commission.value = result;
+            }
+        }
+    </script>
+</body>
+</html>

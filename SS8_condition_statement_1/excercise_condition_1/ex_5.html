@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find max</title>
+</head>
+<body>
+    <h1>tìm số lớn nhất trong 3 số</h1>
+    <form action="">
+        <label for="a">
+            <input type="number" name="a" id="a" placeholder="nhap diem bai kiem tra">
+        </label>
+        <label for="b">
+            <input type="number" name="b" id="b" placeholder="nhap diem giua ki">
+        </label>
+        <label for="c">
+            <input type="number" name="c" id="c" placeholder="nhap diem cuoi ki">
+        </label>
+        <button type="button">check</button>
+    </form>
+    <script>
+        const check = document.querySelector("button");
+
+        check.onclick = function (){
+            const a = +document.querySelector("#a").value;
+            const b = +document.querySelector("#b").value;
+            const c = +document.querySelector("#c").value;
+           
+            let average = (a + b + c)/3
+            if (average > 8) {
+                    alert(`grade average: ${average} => loại giỏi`);
+            } else if(average <= 8 && average >= 7) {
+                    alert(`grade average: ${average} => loại khá`);
+            } else if(average < 7 && average >= 5) {
+                    alert(`grade average: ${average} => loại trung bình`);
+            } else {
+                alert(`grade average: ${average} => loại yếu`)
+            }
+        }
+    </script>
+</body>
+</html>

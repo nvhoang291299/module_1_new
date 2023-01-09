@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find max</title>
+</head>
+<body>
+    <h1>tìm số lớn nhất trong 3 số</h1>
+    <form action="">
+        <label for="a">
+            <input type="number" name="a" id="a" placeholder="nhap a">
+        </label>
+        <label for="b">
+            <input type="number" name="b" id="b" placeholder="nhap b">
+        </label>
+        <label for="c">
+            <input type="number" name="c" id="c" placeholder="nhap c">
+        </label>
+        <button type="button">check</button>
+    </form>
+    <script>
+        const check = document.querySelector("button");
+
+        check.onclick = function (){
+            const a = document.querySelector("#a").value;
+            const b = document.querySelector("#b").value;
+            const c = document.querySelector("#c").value;
+           
+            if (a >= b && a >= c) {
+                    alert(`Giá trị lớn nhất: ${a}`);
+            } else if(b >= a && b >= c) {
+                    alert(`Giá trị lớn nhất: ${b}`);
+            } else if(c >= a && c >= b) {
+                    alert(`Giá trị lớn nhất: ${c}`);
+            }
+        }
+    </script>
+</body>
+</html>

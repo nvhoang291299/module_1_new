@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition switch case</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="get">
+            <label for="month">Nhap thang:
+                <input type="number" name="month" id="month" placeholder="nhap thang">
+            </label>
+            <button type="button">check</button>
+        </form>
+    </div>
+    <script>
+        const check = document.querySelector("button");
+        check.onclick = function() {
+            const month = +document.getElementById("month").value;
+            switch (month) {
+                case 1:
+                    alert("Tháng 1 có 31 ngày");
+                    break;
+                case 2:
+                    alert("Tháng 2 có 28 hoặc 29 ngày"); 
+                    break;
+                case 3:
+                    alert("Tháng 3 có 31 ngày");
+                    break;
+                case 4:
+                    alert("Tháng 4 có 30 ngày");
+                    break;
+                case 5:
+                    alert("Tháng 5 có 31 ngày");
+                    break;
+                case 6:
+                    alert("Tháng 6 có 30 ngày");
+                    break;
+                case 7:
+                    alert("Tháng 7 có 31 ngày");
+                    break;
+                case 8:
+                    alert("Tháng 8 có 31 ngày");
+                    break;
+                case 9:
+                    alert("Tháng 9 có 30 ngày");
+                    break;
+                case 10:
+                    alert("Tháng 10 có 31 ngày");
+                    break;
+                case 11:
+                    alert("Tháng 11 có 30 ngày");
+                    break;
+                case 12:
+                    alert("Tháng 12 có 31 ngày");
+                    break;
+                default:
+                    alert("invalid!")
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
