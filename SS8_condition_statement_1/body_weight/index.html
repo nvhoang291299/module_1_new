@@ -23,7 +23,7 @@
         check.onclick = function () {
             const w = document.querySelector("#weight").value;
             const h = document.querySelector("#height").value;
-            let bmi = w / (h^2);
+            let bmi = w / Math.pow(h, 2);
             if (bmi < 18)
                 document.write("Underweight");
             else if (bmi < 25.0)
