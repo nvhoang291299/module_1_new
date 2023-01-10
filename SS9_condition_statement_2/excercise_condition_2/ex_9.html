@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>excercise 9</title>
+</head>
+<body>
+    <h1>Kiểm tra cạnh của một tam giác</h1>
+    <form action="">
+        <label for="value">a
+            <input type="number" id="valueA" placeholder="a" style="width: 50px;">
+        </label>
+        <label for="value">b
+            <input type="number" id="valueB" placeholder="b" style="width: 50px;">
+        </label>
+        <label for="value">c
+            <input type="number" id="valueC" placeholder="c" style="width: 50px;">
+        </label><br>
+        <button type="button" style="margin-top: 10px">Kết quả</button>
+        <p></p>
+    </form>
+    <script>
+        const btn = document.querySelector("button");
+
+        btn.onclick = function () {
+            const a = +document.querySelector("#valueA").value;
+            const b = +document.querySelector("#valueB").value;
+            const c = +document.querySelector("#valueC").value;
+            const res = document.querySelector("p");
+            
+            if(a > 0 && b > 0 && c > 0){
+                if(a + b > c && b + c > a && a + c > b ) {
+                    res.innerHTML = `${a}, ${b}, ${c} là các cạnh của tam giác`
+                } else {
+                    res.innerHTML = `${a}, ${b}, ${c} không phải là các cạnh của tam giác`
+                }
+            } else {
+                res.innerHTML = `${a}, ${b}, ${c} không phải là các cạnh của tam giác`
+            }
+        }
+    </script>
+</body>
+</html>

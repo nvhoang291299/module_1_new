@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>excercise 11</title>
+</head>
+<body>
+    <h1> Tính thuế thu nhập cá nhân</h1>
+    <form action="">
+        <label for="edge">Thu nhập(triệu đồng):
+            <input type="number" id="tn">
+        </label>
+        <button type="button">Kết quả</button>
+        <p>Thuế thu nhập của bạn: <span></span></p>
+    </form>
+    <script>
+        const btn = document.querySelector("button");
+
+        btn.onclick = function () {
+            const tn = +document.querySelector("#tn").value;
+            const span = document.querySelector("span");
+            let res
+            if (tn <= 5) {
+                res = tn*0.05
+                span.innerHTML = `${res} triệu đồng`
+            } else if (tn > 5 && tn <= 10){
+                res = tn*0.1-0.25
+                span.innerHTML = `${res} triệu đồng`
+            }else if (tn > 10 && tn <= 18){
+                res = tn*0.15-0.75
+                span.innerHTML = `${res} triệu đồng`
+            }else if (tn > 18 && tn <= 32){
+                res = tn*0.2-1.65
+                span.innerHTML = `${res} triệu đồng`
+            }else if (tn > 32 && tn <= 52){
+                res = tn*0.25-3.25
+                span.innerHTML = `${res} triệu đồng`
+            }else if (tn > 52 && tn <= 80){
+                res = tn*0.3-5.85
+                span.innerHTML = `${res} triệu đồng`
+            } else {
+                res = tn*0.35-9.85
+                span.innerHTML = `${res} triệu đồng`
+            }
+        }
+    </script>
+</body>
+</html>

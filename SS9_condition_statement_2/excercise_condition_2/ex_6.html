@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>excercise 6</title>
+</head>
+<body>
+    <h1>Phương trình bậc nhất ax + b = 0</h1>
+    <form action="">
+        <label for="edge">
+            <input type="number" id="edgeA" placeholder="a" style="width: 50px;">
+            x
+        </label>+
+        <label for="edge">
+            <input type="number" id="edgeB" placeholder="b" style="width: 50px;">
+            = 0
+        </label><br>
+        <button type="button" style="margin-top: 10px">Kết quả</button>
+        <p></p>
+    </form>
+    <script>
+        const btn = document.querySelector("button");
+
+        btn.onclick = function () {
+            const a = +document.querySelector("#edgeA").value;
+            const b = +document.querySelector("#edgeB").value;
+
+            const res = document.querySelector("p");
+            if (a !== 0 && b !== 0) {
+                res.innerText = `Phương trình có nghiệm là: x = ${-b/a}`
+            } else if (a == 0 && b !== 0){
+                res.innerText = `Phương trình vô nghiệm`
+            } else if (a == 0 && b == 0) {
+                res.innerText = `Phương trình có vô số nghiệm`
+            } else if (a !== 0 && b == 0){
+                res.innerText = `Phương trình có nghiệm là: x = ${-b/a}`
+            } 
+            
+        }
+    </script>
+</body>
+</html>

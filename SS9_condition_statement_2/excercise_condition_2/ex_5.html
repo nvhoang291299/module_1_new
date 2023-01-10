@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>excercise 5</title>
+</head>
+<body>
+    <h1>Tính diện tích hình tam giác vuông</h1>
+    <form action="">
+        <label for="edge">Cạnh a:
+            <input type="number" id="edgeA" placeholder="nhập cạnh a">
+        </label>
+        <label for="edge">Cạnh b:
+            <input type="number" id="edgeB" placeholder="nhập cạnh b">
+        </label>
+        <button type="button">Kết quả</button>
+        <p>Diện tích hình tam giác vuông: <span></span></p>
+    </form>
+    <script>
+        const btn = document.querySelector("button");
+
+        btn.onclick = function () {
+            const a = +document.querySelector("#edgeA").value;
+            const b = +document.querySelector("#edgeB").value;
+
+            let S
+            const res = document.querySelector("span");
+            if (a > 0 && b > 0) {
+                S = (a*b)/2;
+                res.innerText = S
+            } else {
+                alert("giá trị không hợp lệ!")
+            }
+        }
+    </script>
+</body>
+</html>

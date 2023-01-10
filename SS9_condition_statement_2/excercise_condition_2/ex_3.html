@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>excercise 3</title>
+</head>
+<body>
+    <h1> tính diện tích hình vuông</h1>
+    <form action="">
+        <label for="edge">Cạnh:
+            <input type="number" id="edge" placeholder="nhập cạnh hình vuông">
+        </label>
+        <button type="button">Kết quả</button>
+        <p>Diện tích hình vuông: <span></span></p>
+    </form>
+    <script>
+        const btn = document.querySelector("button");
+
+        btn.onclick = function () {
+            const a = +document.querySelector("#edge").value;
+            const res = document.querySelector("span");
+            let S
+            if (a > 0) {
+                S = Math.pow(a, 2);
+                res.innerText = S
+            } else {
+                alert("giá trị không hợp lệ!")
+            }
+        }
+    </script>
+</body>
+</html>
