@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show output</title>
+</head>
+<body>
+    <h4>bài tập 1</h4>
+    <button onclick="alert('Xin chào!')">Click Me!</button>
+
+    <h4>bài tập 2</h4>
+    <p class="message"></p>
+    <button type="submit" onclick="showMessage1()">Click Me!</button>
+
+    <h4>bài tập 3</h4>
+    <button type="submit" onclick="showMessage2()">Click Me!</button>
+
+    <h4>bài tập 4</h4>
+    <button type="submit" onclick="console.log('hello world!')">Click Me!</button>
+    <script>
+            const msg = document.querySelector(".message");
+            function showMessage1() {
+                msg.innerText = 'xin chào!';
+            }
+
+            function showMessage2() {
+                document.write("Xin chào!");
+            }
+    </script>
+</body>
+</html>
