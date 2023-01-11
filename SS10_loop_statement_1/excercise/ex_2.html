@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập 2</title>
+</head>
+<body>
+    <script>
+        let temp = +prompt("nhập nhiệt độ:");
+        // ---- cách 1 ----
+        // while(temp > 100) {
+        // alert("yêu cầu gaimr nhiệt độ!")
+        // temp = +prompt("nhập nhiệt độ:");
+        // }
+        // while(temp < 20) {
+        // alert("yêu cầu tăng nhiệt độ!")
+        // temp = +prompt("nhập nhiệt độ:");
+        // }
+        // ---- cách 2 ----
+        while(temp > 100 || temp < 20){
+            if(temp > 100) {
+                alert("yêu cầu giảm nhiệt độ!")
+                temp = +prompt("nhập lại nhiệt độ:");
+            } else if (temp < 20) {
+                alert("yêu cầu tăng nhiệt độ!")
+                temp = +prompt("nhập lại nhiệt độ:");
+            }
+        }
+        alert("PERFECT!!!");
+    </script>
+</body>
+</html>

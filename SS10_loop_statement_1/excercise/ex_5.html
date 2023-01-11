@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 5</title>
+</head>
+<body>
+    <h1>tìm số đầu tiên trong dãy fibonacci chia hết cho 5</h1>
+    <script>
+        let f1 = 0;
+        let f2 = 1;
+        let f;
+        let sum = 0;
+
+        for (let i=0; i<20; i++) {
+            f = f1;
+            f1 = f2;
+            f2 = f + f1;
+            sum += f;
+        }
+        document.writeln(`${sum}`);
+    </script>
+</body>
+</html>

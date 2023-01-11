@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập 8</title>
+</head>
+<body>
+    <div>
+        <button>Bắt đầu</button>
+        <div></div>
+    </div>
+    <script>
+        const start = document.querySelector("button");
+        const div = document.querySelector("div");
+
+        start.onclick = function () {
+            let n = +prompt("nhập số mà bạn muốn đoán trong khoảng:");
+            let rd = Math.floor(Math.random() * n );
+            let guess =  +prompt("nhập số mà bạn muốn đoán:");
+            let i = 1;
+            console.log(rd);
+            while(i <= 3) {
+                if(guess == rd) {
+                    div.innerHTML = "chúc mừng bạn đã đoán đúng!";
+                    break;
+                } else if(guess > rd) {
+                    alert("bạn đã đoán lớn hơn");
+                } else if(guess < rd) {
+                    alert("bạn đã đoán nhỏ hơn");
+                }
+                i++;
+                guess = +prompt("nhập lại");
+            }
+            if (i == 4) {
+                div.innerHTML = "bạn đã thua!";  
+            }
+        }
+    </script>
+</body>
+</html>
