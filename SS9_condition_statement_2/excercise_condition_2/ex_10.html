@@ -21,25 +21,25 @@
         btn.onclick = function () {
             const a = +document.querySelector("#a").value;
             const span = document.querySelector("span");
-            let res
+            let res;
             if (a > 401) {
-                res = a*2927
-                span.innerHTML = `${res} Đồng`
+                res = a*2927;
+                span.innerHTML = `${res} Đồng`;
             } else if (a > 301 && a <= 400){
-                res = a*2834
-                span.innerHTML = `${res} Đồng`
+                res = a*2834;
+                span.innerHTML = `${res} Đồng`;
             }else if (a > 201 && a <= 300){
-                res = a*2536
-                span.innerHTML = `${res} Đồng`
+                res = a*2536;
+                span.innerHTML = `${res} Đồng`;
             }else if (a > 101 && a <= 200){
-                res = a*2014
-                span.innerHTML = `${res} Đồng`
+                res = a*2014;
+                span.innerHTML = `${res} Đồng`;
             }else if (a > 51 && a <= 100){
-                res = a*1734
-                span.innerHTML = `${res} Đồng`
+                res = a*1734;
+                span.innerHTML = `${res} Đồng`;
             }else if (a > 0 && a <= 50){
-                res = a*1678
-                span.innerHTML = `${res} Đồng`
+                res = a*1678;
+                span.innerHTML = `${res} Đồng`;
             }
         }
     </script>

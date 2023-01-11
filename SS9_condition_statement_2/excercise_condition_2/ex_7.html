@@ -35,16 +35,16 @@
             let delta
             switch (a) {
                 case 0:
-                    res.innerHTML = `Đây là phương trình bậc 1`
+                    res.innerHTML = `Đây là phương trình bậc 1`;
                     break;
                 default:
-                    delta = Math.pow(b,2)-4*a*c
+                    delta = Math.pow(b,2)-4*a*c;
                     if (delta == 0 ) {
-                        res.innerHTML = `Phương trình có 1 nghiệm: x = ${(-b)/(2*a)}`
+                        res.innerHTML = `Phương trình có 1 nghiệm: x = ${(-b)/(2*a)}`;
                     } else if (delta < 0) {
-                        res.innerHTML = `Phương trình vô nghiệm`
+                        res.innerHTML = `Phương trình vô nghiệm`;
                     } else {
-                        res.innerHTML = `Phương trình có 2 nghiệm: x1 = ${(-b+Math.sqrt(delta))/(2*a)} và x2 = ${(-b-Math.sqrt(delta))/(2*a)}`
+                        res.innerHTML = `Phương trình có 2 nghiệm: x1 = ${(-b+Math.sqrt(delta))/(2*a)} và x2 = ${(-b-Math.sqrt(delta))/(2*a)}`;
                     }
                     break;
             }
