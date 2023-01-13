@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+        let arr = [];
+        let res = [];
+        while (count < 10) {
+            let n = +prompt("nhập giá trị:");
+            arr.push(n);
+            count++;
+        }
+        for (let i = 0; i < arr.length; i++) {
+           if(arr[i] >= 10){
+                res.push(arr[i]);
+           }
+        }
+        document.write( "Số số nguyên lớn hơn bằng 10: " + res + "<br>");
+        document.write("Tổng số nguyên lớn hơn bằng 10: " + res.length);
+    </script>
+</body>
+</html>

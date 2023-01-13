@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+        let arr = [];
+        let flag = 0;
+        let m = +prompt("phần tử số nguyên V:");
+        while (count < 10) {
+            let n = +prompt("nhập giá trị:");
+            arr.push(n);
+            count++;
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i] == m){
+                flag = 1;
+            }
+        }
+        if (flag == 1) {
+                    alert("V is in the array");
+                }
+                else if (flag == 0) {
+                    alert("V is not in the array");
+                }
+    </script>
+</body>
+</html>

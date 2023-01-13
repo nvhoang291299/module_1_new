@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="word">Nhập từ:
+            <input type="text" name="word" id="word">
+        </label>
+        <button type="button">Tìm kiếm</button><br>
+        <p style="margin-top: 20px"></p>
+    </form>
+
+    <script>
+        const button = document.querySelector("button");
+        
+        button.onclick = function () {
+            const input = document.querySelector("input").value;
+            const p = document.querySelector("p");
+            let fruits = ['banana', 'apple', 'strawberry', 'coconut', 'lemon', 'mango', 'grape'];
+            let traiCay = ['chuối', 'táo', 'dâu', 'dừa', 'chanh', 'xoài', 'nho'];
+
+            for (let i = 0; i < fruits.length; i++) {
+                if (input === fruits[i]) {
+                    p.innerHTML = traiCay[i];
+                } else {
+                    p.innerHTML = "từ bạn tìm kiếm hiện không có trong từ điển";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
