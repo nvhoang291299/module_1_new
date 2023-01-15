@@ -27,13 +27,17 @@
 
         let str =  'The Quick Brown Fox';
         let arr1 = str.split('');
-
+        let reGex = /[A-Z]/;
+        let regex = /[a-z]/;
         for (let i = 0; i < arr1.length; i++) {
-            if (arr1[i]) {
-                
+            if (arr1[i] === reGex) {
+               arr1[i] = arr1[i].toLocaleLowerCase();
+            } else if (str === regex) {
+                arr1[i] = arr1[i].toLocaleUpperCase();
             }
-            
         }
+        console.log(arr1);
+        
     </script>
 </body>
 </html>
