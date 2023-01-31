@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str1 = prompt("nhập chuỗi thứ nhất:");
+        let str2 = prompt("Nhập chuỗi thứ hai:");
+        let arr1 = Array.from(str1);
+        let arr2 = Array.from(str2);
+        let flag;
+        if (arr1.length == arr2.length) {
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]) {
+                    flag = 0;
+                    console.log("hai chuỗi không giống nhau");
+                    break;
+                }
+                flag = 1;
+            } 
+            if (flag == 1) {
+                console.log("hai chuỗi giống nhau");
+            }
+        } else {
+            console.log("hai chuỗi không giống nhau");
+        }
+    </script>
+</body>
+</html>
