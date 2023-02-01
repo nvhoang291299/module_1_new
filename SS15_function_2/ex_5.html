@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("nhập số a:");
+        let b = +prompt("nhập số b:");
+        let c = +prompt("nhập số c:");
+
+        function max() {
+            if (a <= b && a <= c) {
+                return document.write("Số nhỏ nhất là: " + a);
+            } else if (b <= a && b <= c) {
+                return document.write("Số nhỏ nhất là: " + b);
+            } else {
+                return document.write("Số nhỏ nhất là: " + c);
+            }
+        }
+        max(a, b, c);
+    </script>
+</body>
+</html>

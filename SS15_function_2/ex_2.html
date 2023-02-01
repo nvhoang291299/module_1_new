@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let r = +prompt("nhập bán kính đường tròn:");
+        function circumference() {
+            let c;
+            c = 2 * r * Math.PI;
+            return document.write("chu vi đường tròn: " + c + "<br>");
+        }
+        circumference(r);
+
+        function area() {
+            let s;
+            s =  Math.pow(r,2)* Math.PI;
+            return document.write("diện tích đường tròn: " + s);
+        }
+        area(r);
+    </script>
+</body>
+</html>
