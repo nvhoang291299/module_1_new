@@ -10,13 +10,13 @@
     <script>
         let arr = [];
         let m = +prompt("số lượng phần tử mảng mà bạn muốn:");
+        let arr1 = [];
 
         for (let i = 0; i < m; i++) {
             let n = +prompt("nhập giá trị:");
             arr.push(n);
         }
-        let arr1 = [];
-        
+
         function reverseArray() {
             for (let i = (arr.length - 1); i >= 0; i--) {
                 arr1.push(arr[i]);
