@@ -8,16 +8,16 @@
 </head>
 <body>
     <script>
-        let sym = +prompt("nhập ký tự");
-
+        let kt = +prompt("nhập ký tự");
+        console.log(kt + " " + typeof kt);
         function isNumber() {
-            if (isNaN(sym)) {
+            if (isNaN(kt)) {
                 return false;
             } else {
                 return true;
             }
         }
-        document.write(isNumber(sym));
+        document.write(isNumber(kt));
     </script>
 </body>
 </html>
