@@ -14,14 +14,14 @@
 
         function max() {
             if (a <= b && a <= c) {
-                return document.write("Số nhỏ nhất là: " + a);
+                return a;
             } else if (b <= a && b <= c) {
-                return document.write("Số nhỏ nhất là: " + b);
+                return b;
             } else {
-                return document.write("Số nhỏ nhất là: " + c);
+                return c;
             }
         }
-        max(a, b, c);
+        document.write(max(a, b, c));
     </script>
 </body>
 </html>
