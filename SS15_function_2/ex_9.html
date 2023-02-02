@@ -15,12 +15,12 @@
         function checkCharacter(arr, kt) {
             let count = 0;
             for (let i = 0; i < arr.length; i++) {
-                if (kt == arr[i]) {
+                if (kt === arr[i]) {
                     flag = 0;
                     count++;
                 } 
             }
-            if (flag == 0) {
+            if (flag === 0) {
                 return count;
             } else {
                 return flag;

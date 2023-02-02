@@ -8,23 +8,22 @@
 </head>
 <body>
     <script>
-        // let arr = [];
-        // let m = +prompt("số lượng phần tử mảng mà bạn muốn:");
+        let arr = [];
+        let m = +prompt("số lượng phần tử mảng mà bạn muốn:");
 
-        // for (let i = 0; i < m; i++) {
-        //     let n = +prompt("nhập giá trị:");
-        //     arr.push(n);
-        // }
-        let arr = [2,3,4,5,6,7,8];
+        for (let i = 0; i < m; i++) {
+            let n = +prompt("nhập giá trị:");
+            arr.push(n);
+        }
         let arr1 = [];
         
-        function invertArray() {
-            for (let i = 0; i < arr.length; i++) {
-                arr1[i] = arr.pop();
+        function reverseArray() {
+            for (let i = (arr.length - 1); i >= 0; i--) {
+                arr1.push(arr[i]);
             }
             return arr1;
         }
-        console.log(invertArray(arr1));
+        console.log(reverseArray(arr1));
     </script>
 </body>
 </html>
