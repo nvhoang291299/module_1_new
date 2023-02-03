@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="500"></canvas>
+<br>
+<script>
+    let canvas = document.getElementById("myCanvas");
+    let h = +prompt("nhập chiều cao: ");
+    let w = +prompt("nhập chiều dài: ");
+
+    class Rectangle{
+        constructor(height, width) {
+            this.height = height,
+            this.width = width
+        }
+
+        getArea() {
+            let s;
+            s = this.height * this.width;
+            return s;
+        }
+    
+        getPerimeter() {
+            let p;
+            p = (this.height + this.width) * 2;
+            return p;
+        }
+    };
+    
+    let rectangle = new Rectangle(h,w);
+    let ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.rect(5, 5, rectangle.height, rectangle.width);
+    ctx.stroke();
+
+    document.write("Diện tích hình chữ nhật: " + rectangle.getArea() + "<br>");
+    document.write("Chu vi hình chữ nhật: " + rectangle.getPerimeter());
+</script>
+</body>
+</html>
