@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class SwitchButton {
+            constructor(status) {
+                this.status = status;
+                this.lamp = ElectricLamp; 
+            };
+
+            switchOff() {
+                this.lamp.status = false;
+                return this.status = false;
+            }
+
+            switchOn() {
+                this.lamp.status = true;
+                return this.status = true;
+            }
+
+            setButton() {
+                this.status = status;
+            }
+            
+            getButton() {
+                return this.status;
+            }
+            
+        }
+        
+        class ElectricLamp{
+            constructor(status) {
+                this.status = status;
+            };
+            
+            getStatus() {
+                return this.status;
+            };
+        };
+        let switchButton = new SwitchButton(true);
+        let electricLamp = new ElectricLamp(switchButton.status);
+
+        console.log(switchButton, electricLamp);
+        document.write("Trạng thái của công tắc: "+ switchButton.switchOff() + "<br>");
+        document.write("Trạng thái của bóng đèn: "+ electricLamp.getStatus() + "<br>");
+    </script>
+</body>
+</html>
