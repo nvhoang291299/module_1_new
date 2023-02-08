@@ -6,16 +6,18 @@
 </head>
 <body>
 <script>
-    let n = +prompt("nhập chiều cao mong muốn:");
-    for (let i = 0; i < n; i++) {
-        for (let j = 0; j <= i; j++) {
-            if (i === 0 || j === 0 || i === (n-1) || j === i) {
-                document.write("*");
-            } else {
-                document.write("&nbsp;&nbsp;");
-            }
-        }
-        document.write("<br>");
+    let char = prompt("Nhập ký tự:");
+
+    switch (char.toLowerCase()) {
+        case 'i':
+        case 'u':
+        case 'o':
+        case 'a':
+        case 'e':
+            document.write(char + " là ký tự nguyên âm");
+            break;
+        default:
+            document.write(char + " không phải là ký tự nguyên âm");
     }
 </script>
 </body>
