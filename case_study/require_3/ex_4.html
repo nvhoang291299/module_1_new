@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrMenu = ['Cafe', 'Cam vắt', 'Nước ép cà rốt', 'Nước ép cà chua', 'Nước lọc', 'Nước dừa'];
+        let arrPrice = [10000, 11000, 12000, 13000, 14000, 15000];
+        let arrOrder = [];//mảng tên đồ uống đã gọi
+        let arrPrice1 = [];//mảng giá đã gọi đồ uống
+        let numOrder;
+        let slArr = [];//mảng số lượng
+        let price = 0;
+        let temp;
+        document.write('Menu đồ uống: (1) Cafe: 10000, (2) Cam vắt: 11000, (3) Nước ép cà rốt: 12000, (4) Nước ép cà chua: 13000, (5) Nước lọc: 14000, (6) Nước dừa: 15000, (7) Thoát gọi món <br>');
+        
+        do {
+            numOrder = +prompt("Nhập số tương ứng với món mà bạn muốn gọi:");
+            if (numOrder == 7) {
+                console.log("thoát gọi món");
+            } else {
+                let sl = +prompt("Nhập số lượng mà ban muốn gọi");
+                arrOrder.push(arrMenu[numOrder - 1]);
+                arrPrice1.push(arrPrice[numOrder - 1]);
+                slArr.push(sl);
+            }
+        } while (numOrder !== 7);
+
+        for (let i = 0; i < arrPrice1.length; i++) {
+            price += (slArr[i] * arrPrice1[i]);
+            document.write("Các đồ uống mà bạn yêu cầu: " + arrOrder[i] + ". Số lượng: " + slArr[i] + "<br>");
+        }
+        document.write("Thành tiền: " + price + " đồng");
+    </script>
+</body>
+</html>

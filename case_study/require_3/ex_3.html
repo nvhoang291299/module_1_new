@@ -8,16 +8,17 @@
 </head>
 <body>
     <script>
-        let numerators = [6,2,5];
+        let numerators = [6,8,5];
         let denominators = [2,2,4];
         let fractionArr = [];
-        let max;
         
         for (let i = 0; i < numerators.length; i++) {
             fractionArr[i] = numerators[i]/denominators[i];
         }
+
+        let max = fractionArr[0];
+        
         for(let i = 0; i < fractionArr.length; i++) {
-            max = fractionArr[0]
             if(max < fractionArr[i]){
                 max = fractionArr[i];
             } 
