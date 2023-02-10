@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let m = +prompt("Số lượng phần tử mảng cha:");
+        let n = +prompt("Số lượng phần tử mảng con:");
+        let newArr = [];
+        function sumMatrix(m,n) {
+            let sum = 0;
+            let arr1 = [];
+
+            for(let i = 0; i < m; i++) {
+                let arr2 = [];
+                for (let j = 0; j < n; j++) {
+                    arr2[j] = +prompt("Nhập giá trị vào mảng");
+                }
+                arr1[i] = arr2;
+            }
+
+            for (let i = 0; i < arr1.length; i++) {
+                newArr = newArr.concat(arr1[i]);
+            }
+
+            for (let j = 0; j < newArr.length; j++) {
+                if (newArr[j] % 2 === 0) {
+                    sum += newArr[j];
+                }
+            }
+            return sum;
+        }
+        console.log(sumMatrix(m,n));
+        
+    </script>
+</body>
+</html>

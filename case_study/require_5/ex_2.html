@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let m = +prompt("Số lượng phần tử mảng cha:");
+        // let n = +prompt("Số lượng phần tử mảng con:");
+        // let newArr = [];
+        let m = 3;
+        let n = 3;
+        function countPrime(m,n) {
+            let arr1 = [];
+            let count = 0;
+            let flag = 0;
+            let newArr = [1,2,3,4,5,6,7,8,9]
+            // for(let i = 0; i < m; i++) {
+            //     let arr2 = [];
+            //     for (let j = 0; j < n; j++) {
+            //         arr2[j] = +prompt("Nhập giá trị vào mảng");
+            //     }
+            //     arr1[i] = arr2;
+            // }
+
+            // for (let i = 0; i < arr1.length; i++) {
+            //     newArr = newArr.concat(arr1[i]);
+            // }
+            let a = newArr.length;
+            for (let i = 2;i < newArr[i]; i++) {
+                if (newArr[i] % i == 0) {
+                return false;
+                }
+            }
+            return newArr[i] > 1;
+        }
+        console.log(countPrime(m,n));
+    </script>
+</body>
+</html>

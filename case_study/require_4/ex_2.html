@@ -8,20 +8,26 @@
 </head>
 <body>
     <script>
-        let s = "asdjaklfj";
-        let arr = s.split("");
-        let arrTemp = [];
+        let s = "abcdgh";
+        let count = 0;
+        let flag = 0;
 
-        function checkCharacter(params) {
-            for (let i = 0; i < arr.length; i++) {
-                arrTemp.push(arr.pop());
-                if (arrTemp[i] !== arr[i]) {
-                    console.log("hello");
+        function checkCharacter(s) {
+            for(let i = 0; i < s.length; i++){
+                for(let j = 0; j < i; j++){
+                    console.log(i, s[i], j, s[j]);
+                    if(s[i] == s[j]){
+                        flag = 1;
+                        break;
+                    }
                 }
-                
+                if(flag == 0){
+                    count++;
+                } 
             }
+            return count;
         }
-        checkCharacter(arr);
+        console.log(checkCharacter(s));
     </script>
 </body>
 </html>
